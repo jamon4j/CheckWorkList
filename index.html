@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <link rel="stylesheet" type="text/css" href="../extjs/resources/css/ext-all.css" /> 
+
+    <script type="text/javascript" src="../extjs/ext-all.js"></script>
+    <script type="text/javascript" src="./Zjj/ui/basic/BasicPanel.js"></script>  
+    <script type="text/javascript" src="./Zjj/control/GridControl.js"></script>        
+    <script type="text/javascript" src="./Zjj/control/StoreControl.js"></script>
+    <script type="text/javascript" src="./Zjj/store/UncheckWorkListStore.js"></script>
+    <script type="text/javascript" src="./Zjj/ui/checkWorkList/WorkListQuery.js"></script>
+    <script type="text/javascript" src="./Zjj/ui/checkWorkList/CheckWorkListFramework.js"></script>
+    <script type="text/javascript" src="./Zjj/ui/checkWorkList/CheckWorkListControl.js"></script>
+    <script type="text/javascript" src="./Zjj/ui/checkWorkList/WorkListGrid.js"></script>
+    <script type="text/javascript" src="./Zjj/util/Event.js"></script>
+        <script type="text/javascript">
+        Ext.onReady(function(){
+            var db = Ext.create("Zjj.control.StoreControl");
+
+            var root = new Ext.Viewport({
+                    
+                    title:"this is allot demo",
+                        
+                    layout:{
+                    
+                        type:"vbox",
+                        align:'stretch'
+                    }
+                                
+            });
+
+            var workListAllotFramework = Ext.create("zjj.ui.checkWorkList.CheckWorkListFramework",{
+                db:db
+            });             
+            
+            root.add(workListAllotFramework);                  
+          });     
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
